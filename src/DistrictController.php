@@ -29,7 +29,7 @@ class DistrictController extends Controller
 				'city_id'    => 'required|numeric',
 				'name'       => 'required|string|max:255',
 				'code'       => 'required|string|max:32|unique:countries',
-				'state'      => 'required|boolean'
+				'status'      => 'required|boolean'
 			]);
 			$row = create_district($fields);
 			if($row){
@@ -51,7 +51,7 @@ class DistrictController extends Controller
 				'name'       => 'required|string|max:255',
 				'code'       => 'required|string|max:32|unique:brands',
 				'sort_order' => 'required|integer',
-				'state'      => 'required|boolean'
+				'status'      => 'required|boolean'
 			]);
 			$row = update_district($id, $fields);
 			if($row){

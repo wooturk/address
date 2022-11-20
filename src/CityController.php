@@ -29,7 +29,7 @@ class CityController extends Controller
 				'country_id' => 'required|numeric',
 				'name'       => 'required|string|max:255',
 				'code'       => 'required|string|max:32|unique:countries',
-				'state'      => 'required|boolean'
+				'status'      => 'required|boolean'
 			]);
 			$row = create_city($fields);
 			if($row){
@@ -51,7 +51,7 @@ class CityController extends Controller
 				'name'       => 'required|string|max:255',
 				'code'       => 'required|string|max:32|unique:brands',
 				'sort_order' => 'required|integer',
-				'state'      => 'required|boolean'
+				'status'      => 'required|boolean'
 			]);
 			$row = update_city($id, $fields);
 			if($row){

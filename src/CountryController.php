@@ -28,7 +28,7 @@ class CountryController extends Controller
 			$fields = $request->validate([
 				'name'       => 'required|string|max:255',
 				'code'       => 'required|string|max:32|unique:countries',
-				'state'      => 'required|boolean'
+				'status'      => 'required|boolean'
 			]);
 			$row = create_country($fields);
 			if($row){
@@ -49,7 +49,7 @@ class CountryController extends Controller
 				'name'       => 'required|string|max:255',
 				'code'       => 'required|string|max:32|unique:brands',
 				'sort_order' => 'required|integer',
-				'state'      => 'required|boolean'
+				'status'      => 'required|boolean'
 			]);
 			$row = update_country($id, $fields);
 			if($row){
